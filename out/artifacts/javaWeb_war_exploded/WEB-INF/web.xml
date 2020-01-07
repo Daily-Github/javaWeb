@@ -3,4 +3,59 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+         <display-name></display-name>
+         <filter>
+             <filter-name>EncodingFilter</filter-name>
+             <filter-class>com.javaweb.javaWeb.filter.EncodingFilter</filter-class><!-- 全路径 从根包开始一直到类名 -->
+         </filter>
+         <filter-mapping>
+             <filter-name>EncodingFilter</filter-name>
+             <url-pattern>/*</url-pattern><!-- /* 即为过滤所有 -->
+         </filter-mapping>
+
+         <servlet><!--servlet类路径配置-->
+             <servlet-name>LoginServlet</servlet-name>
+             <servlet-class>com.javaweb.javaWeb.servlet.LoginServlet</servlet-class>
+         </servlet>
+         <servlet>
+             <servlet-name>RegisterServlet</servlet-name>
+             <servlet-class>com.javaweb.javaWeb.servlet.RegisterServlet</servlet-class>
+         </servlet>
+         <servlet>
+             <servlet-name>FindUserListServlet</servlet-name>
+             <servlet-class>com.javaweb.javaWeb.servlet.FindUserListServlet</servlet-class>
+         </servlet>
+         <servlet>
+             <servlet-name>DeleteUserServlet</servlet-name>
+             <servlet-class>com.javaweb.javaWeb.servlet.DeleteUserServlet</servlet-class>
+         </servlet>
+         <servlet>
+             <servlet-name>UpdateUserServlet</servlet-name>
+             <servlet-class>com.javaweb.javaWeb.servlet.UpdateUserServlet</servlet-class>
+         </servlet>
+
+         <servlet-mapping><!--servlet类映射配置-->
+             <servlet-name>LoginServlet</servlet-name>
+             <url-pattern>/Login</url-pattern>
+         </servlet-mapping>
+         <servlet-mapping>
+             <servlet-name>RegisterServlet</servlet-name>
+             <url-pattern>/Register</url-pattern>
+         </servlet-mapping>
+         <servlet-mapping>
+             <servlet-name>FindUserListServlet</servlet-name>
+             <url-pattern>/FindUserList</url-pattern>
+         </servlet-mapping>
+         <servlet-mapping>
+             <servlet-name>DeleteUserServlet</servlet-name>
+             <url-pattern>/DeleteUser</url-pattern>
+         </servlet-mapping>
+         <servlet-mapping>
+             <servlet-name>UpdateUserServlet</servlet-name>
+             <url-pattern>/UpdateUser</url-pattern>
+         </servlet-mapping>
+
+         <welcome-file-list>
+             <welcome-file>login.jsp</welcome-file>
+         </welcome-file-list>
 </web-app>
