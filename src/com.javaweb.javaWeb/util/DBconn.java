@@ -3,9 +3,9 @@ package com.javaweb.javaWeb.util;
 import java.sql.*;
 
 public class DBconn {
-    static String url = "jdbc:mysql://localhost:3306/demo?useunicuee=true& characterEncoding=utf8"; // 数据库连接url
+    static String url = "jdbc:mysql://localhost:3306/test?useunicuee=true& characterEncoding=utf8"; // 数据库连接url
     static String username = "root"; // 数据库用户名
-    static String password = "123456"; // 用户密码
+    static String password = "root"; // 用户密码
     static Connection conn = null; // 初始化一个数据连接 conn
     static ResultSet rs = null; // 初始化一个结果集 rs
     static PreparedStatement ps =null; // 初始化一个PreparedStatement对象 ps
